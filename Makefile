@@ -6,7 +6,7 @@
 #    By: cbeltrao <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/27 01:30:02 by cbeltrao          #+#    #+#              #
-#    Updated: 2017/10/11 01:00:00 by cbeltrao         ###   ########.fr        #
+#    Updated: 2017/10/15 13:55:34 by cbeltrao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,22 +81,22 @@ SRC = 	ft_strncat.c \
 
 OBJECTS = $(SRC:.c=.o)
 
+.PHONY: all clean fclean re
+
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
 	@echo "\033[92mCompiling libft\033[0m"
-	@gcc $(CFLAGS) -c $(SRC)
+	@gcc -I. $(CFLAGS) -c $(SRC)
 	@ar rc $(NAME) $(OBJECTS)
 	@ranlib $(NAME)
 
 clean:
 	@echo "\033[31mDeleting objects\033[0m"
-	@rm -f $(OBJECTS)
+	@/bin/rm -f $(OBJECTS)
 
 fclean: clean
 	@echo "\033[31mDeleting $(NAME)\033[0m"
-	@rm -f $(NAME)
+	@/bin/rm -f $(NAME)
 
 re: fclean all
-
-.PHONY: all clean fclean re
