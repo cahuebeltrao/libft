@@ -6,7 +6,7 @@
 /*   By: cbeltrao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/06 02:39:07 by cbeltrao          #+#    #+#             */
-/*   Updated: 2017/10/12 00:53:32 by cbeltrao         ###   ########.fr       */
+/*   Updated: 2017/10/15 16:23:21 by cbeltrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
-int	ft_intlen(int n)
+static int	ft_intlen(int n)
 {
 	int len;
 
