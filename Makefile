@@ -6,7 +6,7 @@
 #    By: cbeltrao <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/27 01:30:02 by cbeltrao          #+#    #+#              #
-#    Updated: 2017/10/15 16:34:53 by cbeltrao         ###   ########.fr        #
+#    Updated: 2017/10/15 16:36:22 by cbeltrao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,7 +86,7 @@ OBJECTS=$(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): 
+$(NAME): $(OBJECTS) 
 	@echo "\033[92mCompiling libft\033[0m"
 	@gcc -I. $(CFLAGS) -c $(SRC)
 	@ar rc $(NAME) $(OBJECTS)
