@@ -6,7 +6,7 @@
 /*   By: cbeltrao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/06 02:39:07 by cbeltrao          #+#    #+#             */
-/*   Updated: 2017/10/15 16:23:21 by cbeltrao         ###   ########.fr       */
+/*   Updated: 2017/10/15 19:52:08 by cbeltrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
-static int	ft_intlen(int n)
+static int			ft_intlen(int n)
 {
 	int len;
 
@@ -37,7 +37,7 @@ static unsigned int	get_abs_value(int n)
 	return (abs_n);
 }
 
-char	*ft_itoa(int n)
+char				*ft_itoa(int n)
 {
 	int				len;
 	int				sign;
@@ -53,28 +53,14 @@ char	*ft_itoa(int n)
 	if (!(d = (char *)ft_memalloc(len + sign + 1)))
 		return (NULL);
 	if (sign)
-	{
 		d[0] = '-';
-		while (abs_n > 9)
-		{
-			d[len--] = ((abs_n % 10) + '0');
-			abs_n /= 10;
-		}
-		d[len] = (abs_n + '0');
-	}
-	if (!sign)
+	else if (!sign)
+		--len;
+	while (abs_n > 9)
 	{
-		if (n == 0)
-		{
-			d[0] = '0';
-			return (d);
-		}
-		while (abs_n > 9)
-		{
-			d[--len] = ((abs_n % 10) + '0');
-			abs_n /= 10;
-		}
-		d[--len] = (abs_n + '0');
+		d[len--] = ((abs_n % 10) + '0');
+		abs_n /= 10;
 	}
+	d[len] = (abs_n + '0');
 	return (d);
 }

@@ -6,7 +6,7 @@
 /*   By: cbeltrao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/20 18:29:29 by cbeltrao          #+#    #+#             */
-/*   Updated: 2017/10/12 00:31:32 by cbeltrao         ###   ########.fr       */
+/*   Updated: 2017/10/15 20:00:06 by cbeltrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl(char const *s);
 int		ft_iscchar(char s, char c);
-char	*ft_wordsplit(char const *s, char c);
 char	**ft_strsplit(char const *s, char c);
 size_t	ft_wordcount(char *s, char c);
 int		ft_isspace(char c);

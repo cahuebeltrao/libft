@@ -6,7 +6,7 @@
 #    By: cbeltrao <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/27 01:30:02 by cbeltrao          #+#    #+#              #
-#    Updated: 2017/10/15 16:37:37 by cbeltrao         ###   ########.fr        #
+#    Updated: 2017/10/15 19:59:27 by cbeltrao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,6 @@ SRC=\
 		ft_isspace.c\
 		ft_strsplit.c\
 	 	ft_wordcount.c\
-		ft_wordsplit.c\
 		ft_iscchar.c\
 		ft_putendl.c\
 		ft_putstr_fd.c\
